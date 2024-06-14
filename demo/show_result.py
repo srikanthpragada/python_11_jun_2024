@@ -5,3 +5,5 @@ if marks >= 50:
     print("Passed")
 else:
     print("Failed")
+
+print("The End")
