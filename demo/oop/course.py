@@ -22,6 +22,16 @@ class Course:
     def getTaxrate():
         return Course.taxrate
 
+class OnlineCourse(Course):
+    def __init__(self, title, fee, onlineLink, duration = 30):
+        super().__init__(title, fee, duration)
+        self.onlineLink = onlineLink
+
+    def show(self):
+        super().show()
+        print(self.onlineLink)
+
+
 
 # Objects
 c1 = Course("Python", 10000)
@@ -29,7 +39,8 @@ c2 = Course("Power BI", 15000)
 c1.show()
 print(c1.getNetFee())
 print(Course.getTaxrate())
-# print(c2.getTaxrate())
+oc1 = OnlineCourse("Data Science", 20000, "http://www.abc.com/3934934", 36)
+oc1.show()
 
 
 c2 = Course("Power BI", 15000, 20)
